@@ -1,9 +1,9 @@
-import string
 # string is a sequence of characters
+import string
 
 string_ = 'class by \'durga\' for \"python\" very good'
-string_ = '''class by 'durga' for "python" very good'''
-print(string)
+string_ = """class by 'durga' for "python" very good"""
+print(string_) # class by 'durga' for "python" very good
 
 characters = string.ascii_lowercase
 print(characters[3:7])

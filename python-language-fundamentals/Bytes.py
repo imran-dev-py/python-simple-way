@@ -10,7 +10,7 @@ print(type(b)) # bytes
 print(b[0]) # 10
 print(b[2:]) # b'\x1e('
 
->>> [x for x in b] # [10, 20, 30, 40]
+# >>> [x for x in b] => [10, 20, 30, 40]
 
 # ========================================== byteArray() ===============================
 # byteArray value range is range(0, 256), more than 255 is ValueError
@@ -24,4 +24,4 @@ print(b)
 print(b[-1])
 print(b[2:])
 b[0] = 00
->>> [x for x in b] # [10, 20, 30, 40]
+# >>> [x for x in b] => [10, 20, 30, 40]

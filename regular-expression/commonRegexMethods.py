@@ -5,10 +5,10 @@ import re
 match = re.match('ab', 'abbaadg')
 print(match) # -> <re.Match object; span=(0, 2), match='ab'>
 
-# fullmatch(regex, targetStr) -> Regex has to be full matched with Target str
-match = re.fullmatch('ab', 'abbaadg') # -> None
-match = re.fullmatch('abc', 'abc') # <re.Match object; span=(0, 3), match='abc'>
-print(match)
+# fullmatch(pattern, targetStr) -> Regex has to be full matched with Target str
+match = re.fullmatch('ab', 'abbaadg') # None
+match = re.fullmatch('abc', 'abc') 
+print(match) # <re.Match object; span=(0, 3), match='abc'>
 
 # sub() -> replacementStr
 # re.sub(regex, replacementStr, targetString)
@@ -26,7 +26,7 @@ print(s)  # -> ('___efr', 3)
 splitSite = re.split(r'\.', 'www.google.com')
 print(splitSite) # -> ['www', 'google', 'com']
 
-# findall(regex, targetStr) -> return list of str all matched object
+# findall(regex, str) -> return list of str all matched object
 findAll = re.findall('\d', 'a7b9k6z')
 print(findAll)  # ['7', '9', '6']
 

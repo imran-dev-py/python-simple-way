@@ -10,7 +10,7 @@ import re
 
 pattern = '([a-k][0369][#a-zA-Z0-9]*)'
 string = input('Enter identifer: ')
-match = re.findall(pattern, string, re.IGNORECASE)
+match = re.fullmatch(pattern, string, re.IGNORECASE)
 
 if match:
     print('Matched')

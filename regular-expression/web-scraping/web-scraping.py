@@ -4,14 +4,13 @@
 import urllib.request
 import re
 
-websites = ['http://google.com', 'http://yahoo.com']
+websites = ['https://google.com', 'https://yahoo.com']
 
 for website in websites:
-    print('Searching..', website)
+    print('Searching...', website)
 
-    url = urllib.request.urlopen(website)
-    readUrl = url.read()  # by default it's bytes class
+    open_url = urllib.request.urlopen(website)
+    readUrl = open_url.read()  # by default it bytes class
     webTitle = re.findall('<title>.*</title>', str(readUrl), re.IGNORECASE)
     print(webTitle[0])
 
-print(len('919945600000'))

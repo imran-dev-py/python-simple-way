@@ -11,15 +11,12 @@ lengthOfNumber = len(mobileNumber)
 regexPattern = None
 
 if (lengthOfNumber == 10):
-    regexPattern = re.findall(r'[6-9]\d{9}', mobileNumber)
+    regexPattern = re.fullmatch(r'[6-9]\d{9}', mobileNumber)
 elif (lengthOfNumber == 11):
-    regexPattern = re.findall(r'0[6-9]\d{9}', mobileNumber)
+    regexPattern = re.fullmatch(r'0[6-9]\d{9}', mobileNumber)
 elif (lengthOfNumber == 12):
-    regexPattern = re.findall(r'91[6-9]\d{9}', mobileNumber)
+    regexPattern = re.fullmatch(r'91[6-9]\d{9}', mobileNumber)
 elif (lengthOfNumber == 13):
-    regexPattern = re.findall(r'[+91][6-9]\d{9}', mobileNumber)
+    regexPattern = re.fullmatch(r'[+]91[6-9]\d{9}', mobileNumber)
 
-if regexPattern:
-    print(regexPattern[0])
-else:
-    print(f'{mobileNumber} not valid')
+print(regexPattern.group() if regexPattern else f'{mobileNumber} is not valid')

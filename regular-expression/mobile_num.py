@@ -3,12 +3,10 @@
 import re
 
 mobileNumberInput = input("Enter mobile number: ")
-# mobileNumberInput = '01745090164'
-regexPattern = '[0-9]{3}[0-9]{8}'
+# mobileNumberInput = '017xxxxxxxx'
+regexPattern = '01[3-9][0-9]{8}'
 
 pattern = re.fullmatch(regexPattern, mobileNumberInput)
 
-if pattern:
-    print(pattern.group())
-else:
-    print('Nope')
+print(pattern.group() if pattern else "Nope")
+

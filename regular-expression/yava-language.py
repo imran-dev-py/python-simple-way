@@ -1,5 +1,5 @@
-# Yava language Identifier =>
-# 1. Allowed characters are ==>
+# Yava language Identifier =====================
+# 1. Allowed characters are 
 	# alphabets, digits, #
 # 2. first characters should be lowercase alphabet from a to k
 # 3. 2nd characters should be any digit divisible by 3 [0369]

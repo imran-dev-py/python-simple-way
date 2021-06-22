@@ -47,8 +47,7 @@ for m in mm:
 # if I want to ignore case sensitive problem
 # by default not match until i use IGNORECASE attribute
 searching = re.search('^easy', 'EAsY is always easy', re.IGNORECASE)
-print()
 if searching:
-    print('Matched')
+    print('Matched') # Matched
 else:
     print('Not Matched')

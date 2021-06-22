@@ -3,11 +3,9 @@
 import re
 inputFile = open('input.txt', 'r')
 outputFile = open('output.txt', 'w')
-mobileNumber = set()
 
 for line in inputFile:
-   # mobileNumber = re.findall('[6-9][0-9]{10}', line)
-    mobileNumber.add(re.findall('[6-9][0-9]{10}', line))
+   mobileNumber = re.findall('[6-9][0-9]{10}', line)
 
     for number in mobileNumber:
         outputFile.write(number + '\n')

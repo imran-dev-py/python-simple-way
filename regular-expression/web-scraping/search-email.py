@@ -7,6 +7,6 @@ openurl = urllib.request.urlopen(
     "https://rapidthemes.net/nusaiba/index-2.html")
 readUrl = openurl.read()
 
-phoneNumbers = re.findall(r'[a-z._]+@[a-z]+[.][a-z]{3}', str(readUrl))
+phoneNumbers = re.findall(r'[a-z\._]+@[a-z]+[.][a-z]{3}', str(readUrl))
 for num in phoneNumbers:
     print(num)
